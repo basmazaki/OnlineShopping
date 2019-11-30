@@ -1,0 +1,133 @@
+<form #newPrdFrm="ngForm" (ngSubmit)="saveProduct()">
+  <br><br>
+  <!-- <div class="form-group row">
+    <label for="productID" class="col-sm-2 col-form-label">Product ID</label>
+    <div class="col-sm-10">
+      <input
+        #PrdID="ngModel"
+        [(ngModel)]="product.ID"
+        type="number"
+        class="form-control"
+        id="ProductID"
+        name="ProductID"
+        placeholder="ID"
+        required
+      />
+    </div>
+   
+  </div> -->
+
+<div class="form-group row">
+  <label for="productName" class="col-sm-2 col-form-label">Product Name</label>
+  <div class="col-sm-10">
+    <input
+      #PrdName="ngModel"
+      [(ngModel)]="product.Name"
+      type="text"
+      class="form-control"
+      id="productName"
+      name="productName"
+      placeholder="Name"
+      required
+    />
+  </div>
+  
+</div>
+
+<div class="form-group row">
+  <label for="productPrice" class="col-sm-2 col-form-label">Product Price</label>
+  <div class="col-sm-10">
+    <input
+      [(ngModel)]="product.Price"
+      type="number"
+      class="form-control"
+      id="productPrice"
+      name="productPrice"
+      placeholder="Price"
+      min="1"
+      required
+    />
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="productDescription" class="col-sm-2 col-form-label">Product Description</label>
+  <div class="col-sm-10">
+    <input
+      [(ngModel)]="product.Description"
+      type="text"
+      class="form-control"
+      id="productDescription"
+      name="productDescription"
+      placeholder="Description"
+      
+      required
+    />
+  </div>
+</div>
+
+
+<div class="form-group row">
+  <label for="productQuantity" class="col-sm-2 col-form-label"
+    >Product Quantity</label
+  >
+  <div class="col-sm-10">
+    <input
+      [(ngModel)]="product.Quantity"
+      type="number"
+      class="form-control"
+      id="productQuantity"
+      name="productQuantity"
+      placeholder="Quantity"
+      min="1"
+      required
+    />
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="productImage" class="col-sm-2 col-form-label"
+    >Product Image</label
+  >
+  <div class="col-sm-10">
+    <input
+      [(ngModel)]="product.Image"
+      type="text"
+      class="form-control"
+      id="productImage"
+      name="productImage"
+      placeholder="Image"
+     
+      required
+    />
+  </div>
+</div>
+
+
+<div class="form-group row">
+  <label for="productCatID" class="col-sm-2 col-form-label"
+    >CatID</label
+  >
+  <div class="col-sm-10">
+    <input
+      [(ngModel)]="product.CatID"
+      type="number"
+      class="form-control"
+      id="productCatID"
+      name="productCatID"
+      placeholder="CatID"
+     
+      required
+    />
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-sm-10">
+    <button type="submit" class="btn btn-primary" style="background-color:rgb(6, 202, 202)
+    ;width: 170px" (click)="saveProduct(product.ID)">Edit Product</button>
+  </div>
+</div>
+</form>
+
+

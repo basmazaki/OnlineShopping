@@ -1,0 +1,55 @@
+<!--<table class="table table-bordered table-responsive table-hover">
+        <thead class="thead-light">
+        <tr>
+          <th>Image</th>
+          <th>Name & Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Add/Remove</th>
+       
+        </tr>
+        </thead>
+
+        <tr *ngFor="let prod of ProductListFromMyCard">
+           <td><img  class="mx-auto d-block" alt="Cinque Terre"src="assets/SunGlassesForWoman/{{prod.Image}}"
+            alt="" style="width:300px;height: 300px;"></td>
+         
+          <td class="text-center">{{prod.Name}}<br>{{prod.Description}}</td>
+          <td>{{prod.Price}}</td>
+          <td>{{prod.Quantity}}</td>
+         
+           
+        
+          
+        </tr>
+      </table>-->
+
+
+
+
+      <table class="table table-bordered table-responsive table-hover">
+        <thead class="thead-light">
+        <tr>
+          <th>Image</th>
+          <th>Name & Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Add/Remove</th>
+          <th>Total For Item</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let prod of ProductListFromMyCard;let q = index">
+          <td><img src="assets/SunGlassesForWoman/{{prod.Image}}" width="250px;" height="270px;"/></td>
+          <td class="text-center">{{prod.Name}}-{{prod.Description}}</td>
+          <td>{{prod.Price}}</td>
+          <td>{{prod.Quantity}}</td>
+          <td>
+            <div class="form-inline">
+            <button type="button" (click)="onAddQuantity(prod)" class="btn btn-success">+</button> 
+            <input type="text"  [ngModel] ="prod.Quantity" (ngModelChange) ="prod.Quantity=$event" class="form-control form-inline" id="count">
+            <button type="button" (click)="onRemoveQuantity(prod)" class="btn btn-danger">-</button>
+            </div>
+          </td>
+          <td>{{prod.UnitPrice * prod.Quantity}}</td>
+        </tr>
+      </table>

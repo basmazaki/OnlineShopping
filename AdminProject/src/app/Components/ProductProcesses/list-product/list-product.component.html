@@ -1,0 +1,26 @@
+<div class="container-fiuld">
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Qunatity</th>
+            <th scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prod of  ProductList">
+              <td><img src="assets/SunGlasses/{{prod.Image}}"  style="width:20%;height:80px "></td>
+            <td>{{prod.Name}}</td>
+            <td>{{prod.Price}}</td>
+            <td>{{prod.Description}}</td>
+            <td>{{prod.Quantity}}</td>
+            <td><a class="btn btn-primary" routerLink="/Edit/{{prod.ID}}">Edit</a></td>
+            <td><a class="btn btn-primary" routerLink="/Delete/{{prod.ID}}">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

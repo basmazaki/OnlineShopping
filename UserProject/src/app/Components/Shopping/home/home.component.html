@@ -1,0 +1,66 @@
+<br><br>
+<br><br>
+        <div class="container">
+                <div class="row">
+                      <div class="col-lg-6">
+                        <h4>Select Category :</h4> 
+                        <select name="category" class="custom-select" style="width:50%" [(ngModel)]="selectedID">
+                        <option *ngFor = " let cat of CatList " [value]="cat.ID">
+                        1
+                        </option>
+                        </select>
+                        <br><br>
+                        <br><br>
+                      <div>{{selectedID}}</div>
+                    </div>
+                <div class="col-lg-6">
+                    <div  >
+                        <div data-role="header">
+                        <div data-role="main" class="ui-content" >
+                          <form method="post" action="/action_page_post.php" >
+                            <div data-role="rangeslider">
+                              <label for="price-min">Price:</label>
+                              <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+                              <label for="price-max">Price:</label>
+                              <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+                            </div>
+                              <input type="submit" data-inline="true" value="Submit">
+                              
+                            </form>
+                        </div>
+                      </div>
+                </div>
+             </div>
+           </div>
+           
+
+<br><br><br><br><br><br><br>
+
+
+<!---->
+<div class="row">
+   <div class="col-lg-4" *ngFor="let prd of ProductList">
+  <!--Card-->
+     <div class="card card-cascade card-ecommerce narrower">
+
+      <!--Card image-->
+       <div class="view view-cascade overlay">
+       <img  class="mx-auto d-block"  src="assets\SunGlassesForWoman\{{prd.Image}}"
+          alt="" style="width:100% ;height: 250px;"/>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      
+    
+      <!--Card content-->
+      <div class="card-body card-body-cascade text-center">
+        <!--Category & Title-->
+        <h4 class="card-title" ><strong><a href="" style="color:rgb(17, 33, 68)">Product name</a></strong></h4>
+        <h5>{{prd.Name}}</h5>
+          </div>
+        </div>
+      <br>
+      </div>
+    </div>
+</div>

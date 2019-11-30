@@ -1,0 +1,68 @@
+      <aside>
+                <div id="sidebar" class="nav-collapse ">
+                  <!-- sidebar menu start-->
+                  <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><img src="assets/basma.png" class="img-circle" width="80"></p>
+                    <h5 class="centered"  style="font-size:20px">Basma Zaki</h5>
+                    
+                    <li class="mt">
+                      <a  href="#">
+                        <i class="fa fa-dashboard"></i>
+                        <span><a routerLink="defaultContent">Update</a></span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                      <a href="javascript:;">
+                        <i class="fa fa-desktop"></i>
+                        <span>Category</span>
+                        </a>
+                      <ul class="sub">
+                        <li><a href="#">Add</a></li>
+                        <li><a routerLink="ShowProduct">ShowwProduct</a></li>
+                        <li><a href="#">Delete</a></li>
+                     
+                      </ul>
+                    </li>
+                    <li class="sub-menu">
+                      <a href="javascript:;">
+                        <i class="fa fa-cogs"></i>
+                        <span>Product</span>
+                        </a>
+                      <ul class="sub">
+                        <li><a routerLink="Add"  >Add</a></li>
+                        <li><a href="calendar.html">Update</a></li>
+                        <li><a href="gallery.html">Delete</a></li>
+                     
+                      </ul>
+                    </li>
+                 
+                    
+                    <li class="sub-menu">
+                      <a href="javascript:;">
+                        <i class="fa fa-th"></i>
+                        <span>Data Tables</span>
+                        </a>
+                      <ul class="sub">
+                        <li><a href="basic_table.html">Basic Table</a></li>
+                        <li><a href="responsive_table.html">Responsive Table</a></li>
+                        <li><a href="advanced_table.html">Advanced Table</a></li>
+                      </ul>
+                    </li>
+            
+                    
+                  </ul>
+                  <!-- sidebar menu end-->
+                </div>
+              </aside>
+              <!--sidebar end-->
+
+  <section id="main-content">
+    <section class="wrapper">
+<router-outlet></router-outlet>
+
+    </section>
+  </section>
+
+
+
+
